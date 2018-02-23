@@ -137,6 +137,7 @@ RUN pip install tensorflow-gpu
 
 RUN mkdir -p /opt/opencv
 
+RUN mkdir -p /root/opencv_contrib && /root/opencv
 #Clone contrib OpenCV
 RUN git clone https://github.com/opencv/opencv_contrib.git /root/opencv_contrib && \
 	git checkout ${OPENCV_VERSION}
