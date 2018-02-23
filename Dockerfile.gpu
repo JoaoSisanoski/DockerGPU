@@ -139,9 +139,11 @@ RUN mkdir -p /opt/opencv
 
 #Clone contrib OpenCV
 RUN git clone https://github.com/opencv/opencv_contrib.git /root/opencv_contrib && \
+	cd /root/opencv_contrib && \
 	git checkout ${OPENCV_VERSION}
 # Install OpenCV
 RUN git clone https://github.com/opencv/opencv.git /root/opencv && \
+	cd /root/opencv && \
 	git checkout ${OPENCV_VERSION} \
 	cd /root/opencv && \
 	mkdir build && \
